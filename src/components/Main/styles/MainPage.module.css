@@ -1,0 +1,360 @@
+/* 미디어 쿼리 - 화면 폭이 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  /* 내 정보 섹션 */
+  .myinformation {
+    height: auto;
+    margin-top: 3%;
+  }
+
+  /* 명함 카드 */
+  .Businesscard {
+    width: 80%;
+    height: auto;
+    transform: translateX(10%);
+  }
+
+  /* 나에 대한 소개글 */
+  .aboutme {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    transform: translateY(10%);
+  }
+
+  /* 프로젝트 이미지와 기술 트리 섹션 */
+  .projectimgbox,
+  .techbox,
+  .awardbox
+  {
+    height: auto;
+  }
+
+  /* 프로젝트 상세 정보 */
+  .projectbox {
+    height: auto;
+    margin-bottom: 3%;
+  }
+
+  /* 기술 트리 이미지 위치 조정 */
+  .techskillimg {
+    transform: translateX(50%);
+  }
+
+  /* GitHub 버튼 위치 조정 */
+  .githubButton {
+    margin-left: 10%;
+    margin-top: 3%;
+  }
+}
+
+/* 전체 스타일 */
+.allbody {
+  width: 100%;
+  height: 300vh;
+}
+
+/* 내 정보 스타일 */
+.myinformation {
+  width: 100%;
+  height: 20%;
+  margin-top: 5%;
+}
+
+/* 명함 카드 스타일 */
+.Businesscard {
+  position: absolute;
+  width: 45%;
+  height: 5%;
+  transform: translateX(30%);
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  z-index: 2;
+}
+
+.myimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.information {
+  width: 100%;
+  margin-top: 5%;
+}
+
+.information p {
+  flex: 1;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+/* 나에 대한 소개글 스타일 */
+.aboutme {
+  position: absolute;
+  width: 70%;
+  height: 10%;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  transform: translateY(30%);
+  border-radius: 10px;
+  z-index: 1;
+  margin-left: 20%;
+}
+
+.abouttitle {
+  width: 30%;
+  height: auto;
+  font-size: 2vw;
+  margin-left: 62%;
+}
+
+.aboutinfor {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.aboutinfor2 {
+  width: 55%;
+  height: auto;
+}
+
+.aboutinfor3 {
+  width: 40%;
+  height: auto;
+  margin-left: auto;
+  margin-left: 5%;
+}
+
+.abouttitle p {
+  font-size: 4.5vw;
+  font-weight: bold;
+  margin-left: 2%;
+}
+
+.titlesize {
+  font-size: 2.5vw;
+}
+
+.aboutinfor p {
+  font-size: 1.2vw;
+  margin-left: 5%;
+  margin-bottom: 0;
+}
+
+/* 프로젝트 이미지 박스 스타일 */
+.projectimgbox {
+  width: 100%;
+  height: 16%;
+  background-color: #ffffff;
+}
+
+.projectimgbox p {
+  font-size: 4.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+/* 프로젝트 이미지 슬라이드 스타일 (자동) */
+.divider {
+  position: relative;
+  width: 50%;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 3%;
+  margin-left: 25%;
+}
+
+/* 프로젝트 이미지 상세 스타일 */
+.imageContainer {
+  position: static;
+  overflow: hidden;
+}
+
+.imageContainer:hover .projectimg {
+  opacity: 0.7;
+}
+
+.projectimg {
+  transform: translateX(125%);
+  margin-top: 8%;
+  margin-bottom: 8%;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.hideback {
+  position: absolute;
+  width: 20%;
+  height: 50%;
+  background: linear-gradient(
+    180deg,
+    rgb(235.52, 171.73, 171.73) 0%,
+    rgba(255, 243.31, 243.31, 0) 100%
+  );
+  transform: translate(118%, 37%);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.slideimg {
+  position: relative;
+  width: 75%;
+  height: 55%;
+  margin-left: 13%;
+  transform: translateY(-15%);
+}
+
+.projectbox {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.projectname {
+  position: absolute;
+  width: 25%;
+  height: 20%;
+  margin-top: -30%;
+  margin-left: 50%;
+  z-index: 8;
+}
+
+.projectimginfor {
+  transform: translateY(30%);
+  height: auto;
+}
+
+.projectimginfor p {
+  color: rgb(255, 255, 255);
+}
+
+/* 버튼 스타일 */
+.githubButton {
+  display: inline-block;
+  font-weight: 500;
+  padding: 10px 20px;
+  background-color: #f96565;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1.2vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 17%;
+  margin-top: 5%;
+}
+
+.githubButton:hover {
+  background-color: #f89696;
+  color: #ffffff;
+}
+
+/* 기술 트리 스타일 */
+.techbox {
+  position: relative;
+  width: 100%;
+  height: 12%;
+}
+
+.techbox p {
+  font-size: 4.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.skill {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+}
+
+.skill p {
+  font-size: 2vw;
+  padding-top: 5%;
+  padding-bottom: 8%;
+}
+
+.frontskill {
+  transform: translateX(20%);
+}
+
+.backendskill {
+  transform: translateX(140%);
+}
+
+.serverskill {
+  transform: translateX(260%);
+}
+
+.tool {
+  transform: translateX(380%);
+}
+
+.skillbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.techskillimg {
+  width: 30%;
+  height: auto;
+  margin-left: 10%;
+}
+
+/* 수상 상세 내용 */
+.awardbox {
+  position: relative;
+  width: 100%;
+  height: auto; 
+  margin-top: 20px; 
+}
+.awardtitle {
+  font-size: 4.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+.awarddetail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.awarddetail_title{
+  font-size: 3vw;
+  display: flex;
+  justify-content: left;
+  font-weight: bold;
+  margin-bottom: 1%;
+  margin-left: 10%;
+}
+.awarddetail_content_title {
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: left;
+  font-weight: bold;
+  margin-left: 10%;
+}
+
+.awarddetail_content {
+  font-size: 1.3vw;
+  display: flex;
+  justify-content: left;
+  margin-left: 12%;
+}

@@ -1,0 +1,67 @@
+/* MenuBar.module.css */
+.menuBar {
+    background-color: #ffffff;
+    padding: 10px;
+  }
+  
+  .menuList {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menuItem {
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .menuButton {
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: bold;
+  }
+  
+  .menuButton:hover {
+    background-color: lightblue;
+    color: #333;
+  }
+  .fixedMenuBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff; /* Change this to your desired background color */
+    padding: 10px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    z-index: 100;
+  }
+  
+  /* Style for the fixed menu buttons */
+  .fixedMenuButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .fixedMenuButton:hover {
+    background-color: lightblue;
+    color: #333;
+  }
+  .menuButton {
+    text-decoration: none; /* Add underline for normal state */
+    color: rgb(0, 0, 0); /* Default text color */
+  }
+  

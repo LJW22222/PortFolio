@@ -1,0 +1,37 @@
+.body {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 743vh;
+}
+
+.all {
+  position: relative;
+  width: 100%;
+  height: 743vh;
+  /* box-sizing: border-box; */
+  background-color: rgb(255, 255, 255);
+}
+
+.headerline {
+  position: absolute;
+  width: 100%;
+  height: 1%;
+  top: 0;
+}
+
+.mobileboxline {
+  position: absolute;
+  width: 100%;
+  top: 2%;
+  bottom: 7.3%; /* Space for the footerline */
+  height: 80%;
+}
+
+.footerline {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 100%);
+  bottom: 0;
+}
+

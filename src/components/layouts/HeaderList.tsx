@@ -48,7 +48,7 @@ function HeaderList(props: any)
     <nav className={`${styles.menuBar} ${styles.fixedMenuBar}`}>
       <ul className={styles.menuList}>
       <li className={styles.menuItem}>
-        <Link href="/"><button className={styles.menuButton} onClick={handleRefreshClick}>WellCome!</button></Link>
+        <Link href="/"><button className={styles.menuButton} onClick={handleRefreshClick}>WelCome!</button></Link>
       </li>
       <li className={styles.menuItem}>
       <a href="#" className={styles.menuButton} onClick={scrollToAbout}>about</a>

@@ -51,19 +51,17 @@ const Mainpage = () => {
           <div className={styles.aboutinfor}>
             <div className={styles.aboutinfor2}>
               <p style={{ fontSize: '2vw', fontWeight: 'bold', marginBottom: '2%' }}>
-              Hello. My Name Is Jong-won Lee
+              Hello. My Name is Jong-won Lee
               </p>
               <p>I am a back-end engineer who develops in line with rapidly changing trends.</p>
-              <p>Studying and developing the latest technologies in line with trends.</p>
+              <p>Studying and developing the latest technologies in line with trends.</p><br/>
+              <p style={{ fontSize: '2vw', fontWeight: 'bold', marginBottom: '2%' }}>Links</p>
+              <p><Link href="https://github.com/LJW22222">GitHub</Link></p>
             </div>
             <div className={styles.aboutinfor3}>
               <h2 style={{fontWeight: 'bold', marginBottom: '2%' }}>Awards</h2>
               <p>2023 KOEX Grand Prize</p>
               <p>2023 Technology Startup Competition</p><br/>
-              <h2 style={{fontWeight: 'bold', marginBottom: '2%' }}>Links</h2>
-              <p><Link href="https://www.acmicpc.net/">Baekjoon Silver</Link></p>
-              <p><Link href="https://github.com/LJW22222">GitHub</Link></p>
-              <p><Link href="https://github.com/LJW22222">Notion</Link></p>
             </div>
           </div>
         </div>

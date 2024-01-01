@@ -59,7 +59,7 @@ const Mainpage = () => {
               <p style={{ marginLeft : "7%" }}>● 2023 DMU PD Lab MIT</p>
               <p>- 2020.05 ~ 2022.09 ROKA (Republic of Korea Army)</p>
               <p style={{ marginLeft : "7%" }}> ● GOP Signal Corps </p>
-              <p style={{ marginLeft : "7%" }}> ● Best training camp squad(Awarded Division and Brigade Commander's Commendations)</p>
+              <p style={{ marginLeft : "7%" }}> ● Best training camp squad(Awarded Division and Brigade Commanders Commendations)</p>
             </div>
 
           </div>

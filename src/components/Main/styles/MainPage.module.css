@@ -120,22 +120,11 @@
 }
 
 .aboutinfor2 {
-  width: 55%;
+  margin-top: 10%;
+  width: 100%;
   height: auto;
 }
 
-.aboutinfor3 {
-  width: 40%;
-  height: auto;
-  margin-left: auto;
-  margin-left: 5%;
-}
-
-.abouttitle p {
-  font-size: 4.5vw;
-  font-weight: bold;
-  margin-left: 2%;
-}
 
 .titlesize {
   font-size: 2.5vw;
@@ -260,14 +249,15 @@
   color: #ffffff;
 }
 
-/* 기술 트리 스타일 */
-.techbox {
+
+/* 기술 내용 */
+.techbox{
   position: relative;
   width: 100%;
-  height: 12%;
+  height: auto; 
+  margin-top: 20px; 
 }
-
-.techbox p {
+.techbox p{
   font-size: 4.5vw;
   display: flex;
   justify-content: center;
@@ -275,46 +265,18 @@
   font-weight: bold;
   margin-bottom: 1%;
 }
-
-.skill {
-  position: absolute;
-  width: 20%;
-  height: 100%;
+.techbox_content{
+  position: relative;
+  width: 100%;
+  height: auto; 
 }
-
-.skill p {
-  font-size: 2vw;
-  padding-top: 5%;
-  padding-bottom: 8%;
-}
-
-.frontskill {
-  transform: translateX(20%);
-}
-
-.backendskill {
-  transform: translateX(140%);
-}
-
-.serverskill {
-  transform: translateX(260%);
-}
-
-.tool {
-  transform: translateX(380%);
-}
-
-.skillbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.techskillimg {
-  width: 30%;
-  height: auto;
+.techbox_content p {
+  font-size: 1.8vw;
+  justify-content: left;
   margin-left: 10%;
 }
+
+
 
 /* 수상 상세 내용 */
 .awardbox {
@@ -357,4 +319,23 @@
   display: flex;
   justify-content: left;
   margin-left: 12%;
+}
+
+/*자기소개 부분*/
+.who{
+  position: relative;
+  width: 100%;
+  height: auto; 
+  margin-bottom: 10%;
+}
+
+.who_introduce_box{
+  position: relative;
+  width: 100%;
+  height: auto; 
+  margin-top: 20px; 
+  margin-left: 10%;
+}
+.who_introduce_box p{
+  font-size: 1.3vw;
 }

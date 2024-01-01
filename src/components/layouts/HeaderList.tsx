@@ -6,10 +6,13 @@ function HeaderList(props: any)
 {
 
   //메뉴바에서 버튼 클릭시 화면을 어느 지점으로 이동시켜주는 함수
-  const handleRefreshClick = () => {
-      // Simulate a page refresh
-      window.location.reload();
+  const scrollToWho = () => {
+    const aboutSection = document.getElementById('who');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
+
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
@@ -48,16 +51,16 @@ function HeaderList(props: any)
     <nav className={`${styles.menuBar} ${styles.fixedMenuBar}`}>
       <ul className={styles.menuList}>
       <li className={styles.menuItem}>
-        <Link href="/"><button className={styles.menuButton} onClick={handleRefreshClick}>WelCome!</button></Link>
+      <a href="#" className={styles.menuButton} onClick={scrollToWho}>Who</a>
       </li>
       <li className={styles.menuItem}>
-      <a href="#" className={styles.menuButton} onClick={scrollToAbout}>about</a>
-      </li>
-      <li className={styles.menuItem}>
-        <a href="#project" className={styles.menuButton} onClick={scrollToProject}>Project</a>
+      <a href="#about" className={styles.menuButton} onClick={scrollToAbout}>About</a>
       </li>
       <li className={styles.menuItem}>
         <a href="#tech" className={styles.menuButton} onClick={scrollToTech}>Tech</a>
+      </li>
+      <li className={styles.menuItem}>
+        <a href="#project" className={styles.menuButton} onClick={scrollToProject}>Project</a>
       </li>
       <li className={styles.menuItem}>
         <a href="#award" className={styles.menuButton} onClick={scrollToAwardh}>Award</a>

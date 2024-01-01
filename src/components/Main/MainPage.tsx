@@ -11,10 +11,6 @@ const Mainpage = () => {
 
   const { ref, isInViewport } = useSkillScrollAnimation();
   const React = 40;
-  const TypeScript = 30;
-  const Spring = 60;
-  const Java = 60;
-  const Linux = 20;
 
   return (
     <>
@@ -34,39 +30,82 @@ const Mainpage = () => {
             />
           </div>
           <div className={styles.information}>
-            <p style={{ fontSize: '2vw', fontWeight: 'bold' }}>Lee Jong Won</p>
-            <p style={{ fontSize: '1.5vw' }}>BackEnd/Server</p>
-            <p style={{ fontSize: '1vw', marginTop: '5%', marginBottom: '1%' }}>
+            <p style={{ fontSize: '2vw', fontWeight: 'bold' }}>Jongwon Lee</p>
+            <p style={{ fontSize: '1.5vw' }}>Back-end Developer</p>
+
+            <p style={{ fontSize: '1vw', marginTop : "1%" }}>
+            DMU ComputerSoftwareEngineering B.S.
+            </p>
+            <p style={{ fontSize: '1vw', marginBottom: '1%' }}>
               E | whddnjs5255@gmail.com
             </p>
-            <p style={{ fontSize: '1vw', marginLeft: '-16.5%' }}>
+            <p style={{ fontSize: '1vw', marginLeft: '-13%' }}>
               P | 010-8563-0938
             </p>
           </div>
         </div>
+        
         <div className={styles.aboutme}>
-          <div className={styles.abouttitle}>
-            <p>AboutMe</p>
-          </div>
           <div className={styles.aboutinfor}>
             <div className={styles.aboutinfor2}>
-              <p style={{ fontSize: '2vw', fontWeight: 'bold', marginBottom: '2%' }}>
-              Hello. My Name is Jong-won Lee
+              <p style={{ fontSize: '1.6vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>
+              Hi! I`m JongWon Lee<br/> 
+              I am a back-end engineer who develops in line with rapidly changing trends
               </p>
-              <p>I am a back-end engineer who develops in line with rapidly changing trends.</p>
-              <p>Studying and developing the latest technologies in line with trends.</p><br/>
-              <p style={{ fontSize: '2vw', fontWeight: 'bold', marginBottom: '2%' }}>Links</p>
-              <p><Link href="https://github.com/LJW22222">GitHub</Link></p>
+              <p>I`m Studying the latest technologies in line with changing trends.</p>
+              <p>I Studying steadily so as not to fall behind.</p>
+              <p>We are working on a project that reflects the latest technology.</p><br/>
+              <p>- DMU ComputerSoftwareEngineering B.S.<br/></p>
+              <p style={{ marginLeft : "7%" }}>● 2023 DMU PD Lab MIT</p>
+              <p>- 2020.05 ~ 2022.09 ROKA (Republic of Korea Army)</p>
+              <p style={{ marginLeft : "7%" }}> ● GOP Signal Corps </p>
+              <p style={{ marginLeft : "7%" }}> ● Best training camp squad(Awarded Division and Brigade Commander's Commendations)</p>
             </div>
-            <div className={styles.aboutinfor3}>
-              <h2 style={{fontWeight: 'bold', marginBottom: '2%' }}>Awards</h2>
-              <p>2023 KOEX Grand Prize</p>
-              <p>2023 Technology Startup Competition</p><br/>
-            </div>
+
           </div>
         </div>
-        
       </div>
+      <div id="about"></div>
+      <div className={styles.who}>
+        <div className='mt-5'></div>
+        <p style={{ fontSize: '4.5vw', fontWeight: 'bold', textAlign : "center" }}>About</p>
+        <p style={{ fontSize: '2.5vw', fontWeight: 'bold', textAlign : "left", marginLeft : "10%" }}>Me</p>
+        <p style={{ fontSize: '2.5vw', fontWeight: 'bold', textAlign : "left", marginLeft : "10%" }}>Introduce</p>
+        <div className={styles.who_introduce_box}>
+          <p>빠르게 변화하는 최신기술을 따라가는 개발자 이종원 입니다.<br/>
+          다양한 기술과 최신기술을 프로젝트에 적용시키는 것에 많은 관심이있고, 흥미를 느낍니다.<br/><br/>
+          </p>
+
+          <p>
+          SE | <br/>
+          - 라즈베리파이를 클러스터링하여 Kubernetes(k3s)를 적용한 경험<br/>
+          - Kubernetes에 Nginx Ingress Controller를 사용한 경험<br/>
+          - Kubernetes의 MasterNode와 N개의 WorkerNode를 동기화하여 NFS 서버를 설계 및 구축한 경험<br/>
+          - Spring과 Flask를 사용하여 MSA 아키텍처를 설계한 경험<br/>
+          - DockerHub 플랫폼을 활용하여 Docker를 사용하여 앱/웹 배포한 경험<br/>
+          - 실시간 모니터링(whatap)를 활용하여 실시간으로 서버 모니터링 경험<br/><br/>
+
+          BE | <br/>
+          - Spring의 JPA를 활용하여 개발한 경험<br/>
+          - RestFul API를 구현한 경험<br/><br/>
+
+          - Notion, Git을 활용하여 팀원간의 협업 경험
+
+          </p>
+        </div>
+      </div>
+
+      <div id="tech"></div>
+      <div className={styles.techbox}>
+        <div className='mt-5'></div>
+         <p>Tech</p>
+         <div className={styles.techbox_content}>
+         <p>Strong</p>
+         
+         <p>Basic</p>
+         </div>
+      </div>
+           
       <div id="project"></div>
       <div className={styles.projectimgbox}>
           <div className='mt-5'></div>
@@ -147,93 +186,7 @@ const Mainpage = () => {
             </Carousel>
           </div>
       </div>
-      <div id="tech"></div>
-      <div className={styles.techbox}>
-        <div className='mt-5'></div>
-        <p>Tech</p>
-        <Container ref={ref} className={isInViewport ? "frame-in" : ""}>
-          <div className={`${styles.skill} ${styles.frontskill}`}>
-          <h1 style={{fontWeight: 'bold', marginBottom: '2%' , textAlign: 'center' }}>Strong</h1>
-            <p>Backend</p>
-            <div className={styles.skillbox}>
-              <Image
-                width={100}
-                height={90}
-                className={styles.techskillimg}
-                src="/img/skillimg/springimg.png?text=First slide&bg=f5f5f5"
-                alt="react"
-              />
-              <Image
-                width={100}
-                height={90}
-                className={styles.techskillimg}
-                src="/img/skillimg/springimg.png?text=First slide&bg=f5f5f5"
-                alt="react"
-              />
-            </div>
-          </div>
-          <div className={`${styles.skill} ${styles.backendskill}`}>
-            <h1 style={{fontWeight: 'bold', marginBottom: '2%' , textAlign: 'center' }}>Weak</h1>
-            <p>Backend</p>
-            <div className={styles.skillbox}>
-              <Image
-                width={130}
-                height={150}
-                className={styles.techskillimg}
-                src="/img/skillimg/react.png?text=First slide&bg=f5f5f5"
-                alt="spring"
-              />
-              <Image
-                width={130}
-                height={150}
-                className={styles.techskillimg}
-                src="/img/skillimg/react.png?text=First slide&bg=f5f5f5"
-                alt="spring"
-              />
-            </div>
-          </div>
-          <div className={`${styles.skill} ${styles.serverskill}`}>
-            <h1 style={{fontWeight: 'bold', marginBottom: '2%', textAlign: 'center' }}>Studying</h1>
-            <p>Backend</p>
-            <div className={styles.skillbox}>
-              <Image
-                width={130}
-                height={150}
-                className={styles.techskillimg}
-                src="/img/skillimg/react.png?text=First slide&bg=f5f5f5"
-                alt="spring"
-              />
-              <Image
-                width={130}
-                height={150}
-                className={styles.techskillimg}
-                src="/img/skillimg/react.png?text=First slide&bg=f5f5f5"
-                alt="spring"
-              />
-            </div>
-          </div>
-          <div className={`${styles.skill} ${styles.tool}`}>
-            <h1 style={{fontWeight: 'bold', marginBottom: '2%',  textAlign: 'center' }}>Tools</h1>
-            <p>Backend</p>
-            <div className={styles.skillbox}>
-              <Image
-                width={130}
-                height={150}
-                className={styles.techskillimg}
-                src="/img/skillimg/react.png?text=First slide&bg=f5f5f5"
-                alt="spring"
-              />
-              <Image
-                width={130}
-                height={150}
-                className={styles.techskillimg}
-                src="/img/skillimg/react.png?text=First slide&bg=f5f5f5"
-                alt="spring"
-              />
-            </div>
-          </div>
-        </Container>
-      </div>
+ 
       <div id="award"></div>
       <div className={styles.awardbox}>
         <div className='mt-5'></div>

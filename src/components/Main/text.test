@@ -1,0 +1,156 @@
+        <Container ref={ref} className={isInViewport ? "frame-in" : ""}>
+          <div className={`${styles.skill} ${styles.frontskill}`}>
+          <h1 style={{fontWeight: 'bold', marginBottom: '2%' , textAlign: 'center' }}>Strong</h1>
+            <p>Backend</p>
+            <div className={styles.skillbox}>
+              <Image
+                width={100}
+                height={90}
+                className={styles.techskillimg}
+                src="/img/skillimg/springimg.png?text=First slide&bg=f5f5f5"
+                alt="react"
+              />
+              <Image
+                width={100}
+                height={90}
+                className={styles.techskillimg}
+                src="/img/skillimg/springimg.png?text=First slide&bg=f5f5f5"
+                alt="react"
+              />
+            </div>
+          </div>
+          <div className={`${styles.skill} ${styles.backendskill}`}>
+            <h1 style={{fontWeight: 'bold', marginBottom: '2%' , textAlign: 'center' }}>Weak</h1>
+            <p>Backend</p>
+            <div className={styles.skillbox}>
+              <Image
+                width={130}
+                height={150}
+                className={styles.techskillimg}
+                src="/img/skillimg/react.png?text=First slide&bg=f5f5f5"
+                alt="spring"
+              />
+              <Image
+                width={130}
+                height={150}
+                className={styles.techskillimg}
+                src="/img/skillimg/react.png?text=First slide&bg=f5f5f5"
+                alt="spring"
+              />
+            </div>
+          </div>
+          <div className={`${styles.skill} ${styles.serverskill}`}>
+            <h1 style={{fontWeight: 'bold', marginBottom: '2%', textAlign: 'center' }}>Studying</h1>
+            <p>Backend</p>
+            <div className={styles.skillbox}>
+              <Image
+                width={130}
+                height={150}
+                className={styles.techskillimg}
+                src="/img/skillimg/react.png?text=First slide&bg=f5f5f5"
+                alt="spring"
+              />
+              <Image
+                width={130}
+                height={150}
+                className={styles.techskillimg}
+                src="/img/skillimg/react.png?text=First slide&bg=f5f5f5"
+                alt="spring"
+              />
+            </div>
+          </div>
+          <div className={`${styles.skill} ${styles.tool}`}>
+            <h1 style={{fontWeight: 'bold', marginBottom: '2%',  textAlign: 'center' }}>Tools</h1>
+            <p>Backend</p>
+            <div className={styles.skillbox}>
+              <Image
+                width={130}
+                height={150}
+                className={styles.techskillimg}
+                src="/img/skillimg/react.png?text=First slide&bg=f5f5f5"
+                alt="spring"
+              />
+              <Image
+                width={130}
+                height={150}
+                className={styles.techskillimg}
+                src="/img/skillimg/react.png?text=First slide&bg=f5f5f5"
+                alt="spring"
+              />
+            </div>
+          </div>
+        </Container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* 기술 트리 스타일 */
+.techbox {
+  position: relative;
+  width: 100%;
+  height: 20%;
+  margin-top: 25%;
+}
+
+.techbox p {
+  font-size: 4.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.skill {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+}
+
+.skill p {
+  font-size: 2vw;
+  padding-top: 5%;
+  padding-bottom: 8%;
+}
+
+.frontskill {
+  transform: translateX(20%);
+}
+
+.backendskill {
+  transform: translateX(140%);
+}
+
+.serverskill {
+  transform: translateX(260%);
+}
+
+.tool {
+  transform: translateX(380%);
+}
+
+.skillbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.techskillimg {
+  width: 30%;
+  height: auto;
+  margin-left: 10%;
+}

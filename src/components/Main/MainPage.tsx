@@ -37,10 +37,10 @@ const Mainpage = () => {
             DMU ComputerSoftwareEngineering B.S.
             </p>
             <p style={{ fontSize: '1vw', marginBottom: '1%' }}>
-              E | whddnjs5255@gmail.com
+              E | whddnjs1245@gmail.com
             </p>
             <p style={{ fontSize: '1vw', marginLeft: '-13%' }}>
-              P | 010-8563-0938
+              P | 010-XXXX-XXXX
             </p>
           </div>
         </div>
@@ -50,7 +50,7 @@ const Mainpage = () => {
             <div className={styles.aboutinfor2}>
               <p style={{ fontSize: '1.6vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>
               Hi! I`m JongWon Lee<br/> 
-              I am a back-end engineer who develops in line with rapidly changing trends
+              I`m a back-end engineer who develops in line with rapidly changing trends
               </p>
               <p>I`m Studying the latest technologies in line with changing trends.</p>
               <p>I Studying steadily so as not to fall behind.</p>

@@ -1,0 +1,22 @@
+/* loadingstyle.module.css */
+
+.loadingContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loadingText {
+    margin-bottom: 20px;
+    color: #007bff; /* Bootstrap primary color */
+  }
+  
+  .spinner {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 10px;
+    color: #007bff; /* Bootstrap primary color */
+  }
+  

@@ -88,7 +88,8 @@ const Mainpage = () => {
           BE | <br/>
           - Spring의 JPA를 활용하여 개발한 경험<br/>
           - RestFul API를 구현한 경험<br/><br/>
-
+          
+          TO | <br/>
           - Notion, Git을 활용하여 팀원간의 협업 경험
 
           </p>
@@ -99,10 +100,25 @@ const Mainpage = () => {
       <div className={styles.techbox}>
         <div className='mt-5'></div>
          <p>Tech</p>
-         <div className={styles.techbox_content}>
-         <p>Strong</p>
-         
-         <p>Basic</p>
+         <div className={styles.techbox_content_box}>
+         <p>S | Strong</p>
+              <div className={styles.techbox_content}>
+                <p>BE :  Spring | Spring Boot | Flask | Spring JPA | MySQL </p>
+                <p>FE :  Next.js</p>
+              </div>
+         <br/><br/>
+         <p>W| Weak</p>
+              <div className={styles.techbox_content}>
+                <p>BE :  Node.js | Redis | Kafka |</p>
+                <p>FE :  Flutter | Vue.js | Android | C | C# | C++</p>
+              </div>
+          <br/><br/>
+          <p>E| ETC</p>
+              <div className={styles.techbox_content}>
+                <p>DEV : Docker | Kubernetes | NginxIngressController | AWS | Linux | CloudFlare </p>
+                <p>TO :  InteliJ | Visual Studio Code | Eclipse | Git | Notion | Slack |</p>
+              </div>
+          <br/><br/>
          </div>
       </div>
            

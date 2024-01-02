@@ -4,8 +4,36 @@ import Link from "next/link";
 import styles from "@/components/Main/styles/MainPage.module.css";
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS 스타일시트를 추가
-import { Container } from "@/components/Main/styles/skillAnimationcss"
 import { useSkillScrollAnimation } from "@/components/Main/animation/skillAnimation";
+
+const ProjectItem: React.FC<{ projectName: string; category: string; team: string; githubLink: string }> = ({ projectName, category, team, githubLink }) => (
+  <div className={styles.projectbox}>
+    <div className={styles.hideback} />
+    <Link href="/ProjectInformation">
+      <div className={styles.imageContainer}>
+        <Image
+          width={220}
+          height={220}
+          className={styles.projectimg}
+          src={`/img/${projectName}.png?text=First slide&bg=f5f5f5`}
+          alt={projectName}
+        />
+      </div>
+    </Link>
+    <div className={styles.projectname}>
+      <p style={{ fontSize: '2vw', fontWeight: 'bold' }}>{projectName}</p>
+      <p style={{ fontSize: '1.5vw', fontWeight: 'bold', justifyContent: 'left', marginLeft: '17%' }}>
+        {category}
+      </p>
+      <p style={{ fontSize: '1.5vw', fontWeight: 'bold', justifyContent: 'left', marginLeft: '17%' }}>
+        {team}
+      </p>
+      <Link href={githubLink} target="_blank" rel="noopener noreferrer" className={styles.githubButton}>
+        GitHub ＞
+      </Link>
+    </div>
+  </div>
+);
 
 const Mainpage = () => {
 
@@ -68,60 +96,80 @@ const Mainpage = () => {
       <div id="about"></div>
       <div className={styles.who}>
         <div className='mt-5'></div>
-        <p style={{ fontSize: '4.5vw', fontWeight: 'bold', textAlign : "center" }}>About</p>
-        <p style={{ fontSize: '2.5vw', fontWeight: 'bold', textAlign : "left", marginLeft : "10%" }}>Me</p>
-        <p style={{ fontSize: '2.5vw', fontWeight: 'bold', textAlign : "left", marginLeft : "10%" }}>Introduce</p>
+        <p className={styles.who_title}>
+          About. <span className={styles.subtitle}>Me</span>
+        </p>
+        <p style={{ fontSize: '2.5vw', fontWeight: 'bold', textAlign: 'left' }}>
+          Introduce
+        </p>
         <div className={styles.who_introduce_box}>
-          <p>빠르게 변화하는 최신기술을 따라가는 개발자 이종원 입니다.<br/>
-          다양한 기술과 최신기술을 프로젝트에 적용시키는 것에 많은 관심이있고, 흥미를 느낍니다.<br/><br/>
-          </p>
-
           <p>
-          SE | <br/>
-          - 라즈베리파이를 클러스터링하여 Kubernetes(k3s)를 적용한 경험<br/>
-          - Kubernetes에 Nginx Ingress Controller를 사용한 경험<br/>
-          - Kubernetes의 MasterNode와 N개의 WorkerNode를 동기화하여 NFS 서버를 설계 및 구축한 경험<br/>
-          - Spring과 Flask를 사용하여 MSA 아키텍처를 설계한 경험<br/>
-          - DockerHub 플랫폼을 활용하여 Docker를 사용하여 앱/웹 배포한 경험<br/>
-          - 실시간 모니터링(whatap)를 활용하여 실시간으로 서버 모니터링 경험<br/><br/>
-
-          BE | <br/>
-          - Spring의 JPA를 활용하여 개발한 경험<br/>
-          - RestFul API를 구현한 경험<br/><br/>
-          
-          TO | <br/>
-          - Notion, Git을 활용하여 팀원간의 협업 경험
-
+            빠르게 변화하는 최신 기술을 따라가는 개발자 이종원 입니다.
+            <br /> 다양한 기술과 최신 기술을 프로젝트에 적용시키는 것에 많은 관심이 있고, 흥미를 느낍니다.
+            <br />
           </p>
+          <p>
+            <strong>SE |</strong>
+            <br />
+            <ul>
+              <li>라즈베리파이를 클러스터링하여 Kubernetes(k3s)를 적용한 경험</li>
+              <li>Kubernetes에 Nginx Ingress Controller를 사용한 경험</li>
+              <li>Kubernetes의 MasterNode와 N개의 WorkerNode를 동기화하여 NFS 서버를 설계 및 구축한 경험</li>
+              <li>Spring과 Flask를 사용하여 MSA 아키텍처를 설계한 경험</li>
+              <li>DockerHub 플랫폼을 활용하여 Docker를 사용하여 앱/웹 배포한 경험</li>
+              <li>실시간 모니터링(whatap)를 활용하여 실시간으로 서버 모니터링 경험</li>
+            </ul>
+          </p>
+          <p>
+            <strong>BE |</strong>
+            <br />
+            <ul>
+              <li>Spring의 JPA를 활용하여 개발한 경험</li>
+              <li>RestFul API를 구현한 경험</li>
+            </ul>
+          </p>
+          <p>
+            <strong>TO |</strong>
+            <br />
+            <ul>
+              <li>Notion, Git을 활용하여 팀원 간의 협업 경험</li>
+            </ul>
+          </p>
+          <hr />
         </div>
       </div>
+      <div className='mt-5'></div>
 
       <div id="tech"></div>
       <div className={styles.techbox}>
         <div className='mt-5'></div>
-         <p>Tech</p>
-         <div className={styles.techbox_content_box}>
-         <p>S | Strong</p>
-              <div className={styles.techbox_content}>
-                <p>BE :  Spring | Spring Boot | Flask | Spring JPA | MySQL </p>
-                <p>FE :  Next.js</p>
-              </div>
-         <br/><br/>
-         <p>W| Weak</p>
-              <div className={styles.techbox_content}>
-                <p>BE :  Node.js | Redis | Kafka |</p>
-                <p>FE :  Flutter | Vue.js | Android | C | C# | C++</p>
-              </div>
-          <br/><br/>
-          <p>E| ETC</p>
-              <div className={styles.techbox_content}>
-                <p>DEV : Docker | Kubernetes | NginxIngressController | AWS | Linux | CloudFlare </p>
-                <p>TO :  InteliJ | Visual Studio Code | Eclipse | Git | Notion | Slack |</p>
-              </div>
-          <br/><br/>
-         </div>
+        <p className={styles.who_title}>Tech</p>
+        <div className={styles.techbox_content_box}>
+          <p>
+          <strong>S | Strong</strong>
+          <ul className={styles.techbox_content}>
+            <li>BE : Spring | Spring Boot | Flask | Spring JPA | MySQL</li>
+            <li>FE : Next.js</li>
+          </ul>
+          </p>
+          <p>
+          <strong>W | Weak</strong>
+          <ul className={styles.techbox_content}>
+            <li>BE : Node.js | Redis | Kafka</li>
+            <li>FE : Flutter | Vue.js | Android | C | C# | C++</li>
+          </ul>
+          </p>
+          <p>
+          <strong>E | ETC</strong>
+          <ul className={styles.techbox_content}>
+            <li>DEV : Docker | Kubernetes | NginxIngressController | AWS | Linux | CloudFlare</li>
+            <li>TO : InteliJ | Visual Studio Code | Eclipse | Git | Notion | Slack</li>
+          </ul>
+          </p>
+          <hr />
+        </div>
       </div>
-           
+      <div className='mt-5'></div>
       <div id="project"></div>
       <div className={styles.projectimgbox}>
           <div className='mt-5'></div>
@@ -130,74 +178,10 @@ const Mainpage = () => {
             <div className={styles.slideimg}>
               <Carousel data-bs-theme="dark" variant="dark" style={{height : '100%'}}>
                 <Carousel.Item>
-                  <div className={styles.projectbox}>
-                    <div className={`${styles.hideback}`}/>
-                    <Link href="/ProjectInformation">
-                      <div className={styles.imageContainer}>
-                        <Image
-                          width={220}
-                          height={220}
-                          className={`${styles.projectimg}`}
-                          src="/img/AilySite.png?text=First slide&bg=f5f5f5"
-                          alt="First slide"
-                        />
-                      </div>
-                    </Link>
-                    <div className={styles.projectname}>
-                      <p style={{ fontSize: '2vw', fontWeight: 'bold'  }}>Aily-Recycle</p>
-                      <p style={{ fontSize: '1.5vw', fontWeight: 'bold', justifyContent : 'left', marginLeft : '17%'}}>TeamProject</p>
-                      <p style={{ fontSize: '1.5vw', fontWeight: 'bold', justifyContent : 'left', marginLeft : '17%'}}>KOEX</p>
-                      <Link href="https://github.com/Aily-AIRecycle" target="_blank" rel="noopener noreferrer" className={styles.githubButton}>
-                        GitHub ＞</Link>
-                    </div>
-                  </div>
+                  <ProjectItem projectName="Aily-Recycle" category="TeamProject" team="KOEX" githubLink="https://github.com/Aily-AIRecycle" />
                 </Carousel.Item>
                 <Carousel.Item>
-                  <div className={styles.projectbox}>
-                    <div className={styles.hideback}/>
-                    <Link href="/ProjectInformation">
-                      <div className={styles.imageContainer}>
-                        <Image
-                          width={220}
-                          height={220}
-                          className={`${styles.projectimg}`}
-                          src="/img/AilySite.png?text=First slide&bg=f5f5f5"
-                          alt="First slide"
-                        />
-                      </div>
-                    </Link>
-                    
-                    <div className={styles.projectname}>
-                      <p style={{ fontSize: '2vw', fontWeight: 'bold'  }}>Aily-Recycle</p>
-                      <p style={{ fontSize: '1.5vw', fontWeight: 'bold', justifyContent : 'left', marginLeft : '17%'  }}>Order</p>
-                      <p style={{ fontSize: '1.5vw', fontWeight: 'bold', justifyContent : 'left', marginLeft : '17%'  }}>Order</p>
-                      <Link href="#" target="_blank" rel="noopener noreferrer" className={styles.githubButton}>
-                        What? ▶</Link>
-                    </div>
-                  </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <div className={styles.projectbox}>
-                    <div className={styles.hideback}/>
-                    <Link href="/ProjectInformation">
-                      <div className={styles.imageContainer}>
-                        <Image
-                          width={220}
-                          height={220}
-                          className={`${styles.projectimg}`}
-                          src="/img/AilySite.png?text=First slide&bg=f5f5f5"
-                          alt="First slide"
-                        />
-                      </div>
-                    </Link>
-                    <div className={styles.projectname}>
-                      <p style={{ fontSize: '2vw', fontWeight: 'bold'  }}>Aily-Recycle</p>
-                      <p style={{ fontSize: '1.5vw', fontWeight: 'bold', justifyContent : 'left', marginLeft : '17%'  }}>Order</p>
-                      <p style={{ fontSize: '1.5vw', fontWeight: 'bold', justifyContent : 'left', marginLeft : '17%'  }}>Order</p>
-                      <Link href="#" target="_blank" rel="noopener noreferrer" className={styles.githubButton}>
-                      What? ▶</Link>
-                    </div>
-                  </div>
+                  <ProjectItem projectName="Aily-Recycle" category="Test" team="KOEX" githubLink="https://github.com/Aily-AIRecycle" />
                 </Carousel.Item>
             </Carousel>
           </div>
@@ -214,7 +198,7 @@ const Mainpage = () => {
             <p>Activities</p>
           </div>
           <div className={styles.awarddetail_content_title}>
-            <h3>2023 동양미래EXPO 제41회 작품전시회 - 장려상 -</h3>
+            <p>2023 동양미래EXPO 제41회 작품전시회 - 장려상 -</p>
           </div>
           <div className={styles.awarddetail_content}>
             <p style={{fontWeight: 'bold',  textAlign: 'center', fontSize: '1.5vw' }}>Back-End</p><br/><br/>

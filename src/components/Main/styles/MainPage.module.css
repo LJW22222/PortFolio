@@ -24,8 +24,7 @@
   /* 프로젝트 이미지와 기술 트리 섹션 */
   .projectimgbox,
   .techbox,
-  .awardbox
-  {
+  .awardbox {
     height: auto;
   }
 
@@ -51,12 +50,14 @@
 .allbody {
   width: 100%;
   height: 300vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
 }
 
 /* 내 정보 스타일 */
 .myinformation {
   width: 100%;
-  height: 20%;
+  height: 15%;
 }
 
 /* 명함 카드 스타일 */
@@ -65,9 +66,9 @@
   width: 45%;
   height: 5%;
   transform: translateX(30%);
-  border: 1px solid black;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(to right, #e2f5f7, #508fbf); /* 블루 톤의 그라데이션 배경색 */
   display: flex;
   z-index: 2;
 }
@@ -85,9 +86,9 @@
 
 .information p {
   flex: 1;
-  color: rgb(0, 0, 0);
+  color: #333;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 0;
 }
 
@@ -96,8 +97,8 @@
   position: absolute;
   width: 70%;
   height: 10%;
-  border: 1px solid black;
-  background-color: rgb(255, 255, 255);
+  border: 1px solid #ddd;
+  background: linear-gradient(to right, #ffeedf, #f49c7e); /* 옐로우 오렌지 톤의 그라데이션 배경색 */
   transform: translateY(30%);
   border-radius: 10px;
   z-index: 1;
@@ -107,7 +108,7 @@
 .abouttitle {
   width: 30%;
   height: auto;
-  font-size: 2vw;
+  font-size: 1.5vw;
   margin-left: 62%;
 }
 
@@ -124,13 +125,12 @@
   height: auto;
 }
 
-
 .titlesize {
-  font-size: 2.5vw;
+  font-size: 1.8vw;
 }
 
 .aboutinfor p {
-  font-size: 1.2vw;
+  font-size: 1vw;
   margin-left: 5%;
   margin-bottom: 0;
 }
@@ -139,7 +139,7 @@
 .projectimgbox {
   width: 100%;
   height: 16%;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .projectimgbox p {
@@ -156,7 +156,7 @@
   position: relative;
   width: 50%;
   height: 1px;
-  background-color: #000;
+  background-color: #333;
   margin-bottom: 3%;
   margin-left: 25%;
 }
@@ -183,11 +183,7 @@
   position: absolute;
   width: 20%;
   height: 50%;
-  background: linear-gradient(
-    180deg,
-    rgb(235.52, 171.73, 171.73) 0%,
-    rgba(255, 243.31, 243.31, 0) 100%
-  );
+  background: linear-gradient(180deg, #ebabab 0%, rgba(255, 243, 243, 0) 100%);
   transform: translate(118%, 37%);
   border-radius: 10px;
   z-index: -1;
@@ -204,7 +200,7 @@
 .projectbox {
   position: relative;
   width: 100%;
-  height: 30%;
+  height: auto;
   z-index: 1;
   border-radius: 15px;
 }
@@ -224,7 +220,7 @@
 }
 
 .projectimginfor p {
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 
 /* 버튼 스타일 */
@@ -248,48 +244,62 @@
   color: #ffffff;
 }
 
-
 /* 기술 내용 */
-.techbox{
+.techbox {
   position: relative;
-  width: 100%;
-  height: auto; 
-  margin-top: 20px;
+  width: 80%;
+  max-width: auto; /* 최대 너비 설정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  background: #fff; /* 흰색 배경색으로 변경 */
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  border-radius: 15px; /* 모서리를 둥글게 만듦 */
 }
-.techbox p{
+.techbox p {
   font-size: 4.5vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-weight: bold;
   margin-bottom: 1%;
 }
-.techbox_content_box{
-  position: relative;
-  width: 100%;
-  height: auto; 
+
+
+.techbox_content_box {
+  margin-top: 20px;
 }
+
 .techbox_content_box p {
-  font-size: 1.8vw;
-  justify-content: left;
-  margin-left: 10%;
+  font-size: 1.3vw;
+  line-height: 1.6;
+  color: #555; /* 약간 어두운 회색으로 텍스트 색상 조정 */
 }
-.techbox_content{
-  justify-content: left;
-  margin-left: 5%;
+
+.techbox_content {
+  margin-top: 10px;
 }
-.techbox_content p{
-  font-size: 1.5vw;
+
+.techbox_content li {
+  font-size: 1.2vw;
+  line-height: 1.6;
   font-weight: normal;
+  color: #555; /* 텍스트 색상 어두운 회색으로 변경 */
+  list-style-type: square; /* 목록 항목을 네모 모양으로 변경 */
+  margin-left: 2%; /* 목록 왼쪽 여백 추가 */
+  margin-bottom: 10px; /* 목록 항목 간격 추가 */
 }
 
 /* 수상 상세 내용 */
 .awardbox {
   position: relative;
-  width: 100%;
-  height: auto; 
-  margin-top: 20px; 
+  height: auto;
+  max-height: auto;
+  width: 80%;
+  max-width: auto; /* 최대 너비 설정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  background: #fff; /* 흰색 배경색으로 변경 */
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  border-radius: 15px; /* 모서리를 둥글게 만듦 */
 }
+
 .awardtitle {
   font-size: 4.5vw;
   display: flex;
@@ -298,48 +308,88 @@
   font-weight: bold;
   margin-bottom: 1%;
 }
+
 .awarddetail {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.awarddetail_title{
-  font-size: 3vw;
+
+.awarddetail_title {
+  font-size: 2.5vw;
   display: flex;
   justify-content: left;
   font-weight: bold;
   margin-bottom: 1%;
-  margin-left: 10%;
+
 }
+
 .awarddetail_content_title {
   font-size: 1.5vw;
   display: flex;
   justify-content: left;
   font-weight: bold;
-  margin-left: 10%;
 }
 
 .awarddetail_content {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   display: flex;
   justify-content: left;
-  margin-left: 12%;
+
 }
 
-/*자기소개 부분*/
-.who{
+/* 자기소개 부분 스타일 */
+.who {
   position: relative;
-  width: 100%;
-  height: auto; 
+  width: 80%;
+  max-width: auto; /* 최대 너비 설정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  background: #fff; /* 흰색 배경색으로 변경 */
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  border-radius: 15px; /* 모서리를 둥글게 만듦 */
 }
 
-.who_introduce_box{
-  position: relative;
-  width: 100%;
-  height: auto; 
-  margin-top: 20px; 
-  margin-left: 10%;
+.who_title {
+  font-size: 4.5vw;
+  font-weight: bold;
+  text-align: center;
 }
-.who_introduce_box p{
+
+.subtitle {
+  font-size: 2.5vw;
+  font-weight: bold;
+  margin-left: 1%;
+}
+
+.who_introduce_box {
+  margin-top: 20px;
+}
+
+.who_introduce_box p {
   font-size: 1.3vw;
+  line-height: 1.6;
+  color: #555; /* 약간 어두운 회색으로 텍스트 색상 조정 */
+}
+
+.who_introduce_box ul {
+  list-style-type: square;
+  margin-left: 2.5%;
+  padding-left: 10px;
+}
+
+.who_introduce_box ul li {
+  font-size: 1.2vw;
+  margin-bottom: 10px;
+  color: #333; /* 목록 항목 색상을 어두운 회색으로 변경 */
+}
+
+/* 추가된 디자인 요소 */
+.who_introduce_box strong {
+  color: #000; /* 강조된 텍스트 색상을 검은색으로 변경 */
+}
+
+.who_introduce_box hr {
+  border: 1px solid #ddd; /* 수평 선 추가 */
+  margin: 20px 0;
 }

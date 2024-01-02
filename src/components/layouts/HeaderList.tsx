@@ -66,7 +66,7 @@ function HeaderList(props: any)
         <a href="#award" className={styles.menuButton} onClick={scrollToAwardh}>Award</a>
       </li>
       <li className={styles.menuItem}>
-        <button className={styles.menuButton} onClick={openBloge}>Bloge</button>
+        <button className={styles.menuButton} onClick={openBloge}>Blog</button>
       </li>
     </ul>
   </nav>

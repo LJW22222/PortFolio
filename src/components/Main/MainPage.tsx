@@ -74,22 +74,20 @@ const Mainpage = () => {
         </div>
         
         <div className={styles.aboutme}>
-          <div className={styles.aboutinfor}>
-            <div className={styles.aboutinfor2}>
-              <p style={{ fontSize: '1.6vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>
-              Hi! I`m JongWon Lee<br/> 
-              I`m a back-end engineer who develops in line with rapidly changing trends
-              </p>
-              <p>I`m Studying the latest technologies in line with changing trends.</p>
-              <p>I Studying steadily so as not to fall behind.</p>
-              <p>We are working on a project that reflects the latest technology.</p><br/>
-              <p>- DMU ComputerSoftwareEngineering B.S.<br/></p>
-              <p style={{ marginLeft : "7%" }}>● 2023 DMU PD Lab MIT</p>
-              <p>- 2020.05 ~ 2022.09 ROKA (Republic of Korea Army)</p>
-              <p style={{ marginLeft : "7%" }}> ● GOP Signal Corps </p>
-              <p style={{ marginLeft : "7%" }}> ● Best training camp squad(Awarded Division and Brigade Commanders Commendations)</p>
-            </div>
-
+          <div className={styles.aboutinfor2}>
+            <hr></hr>
+            <p style={{ fontSize: '1.6vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>
+            Hi! I`m JongWon Lee<br/> 
+            I`m a back-end engineer who develops in line with rapidly changing trends
+            </p>
+            <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>I`m Studying the latest technologies in line with changing trends.</p>
+            <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>I Studying steadily so as not to fall behind.</p>
+            <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>We are working on a project that reflects the latest technology.</p><br/>
+            <p style={{ fontSize: '1vw' }}>- DMU ComputerSoftwareEngineering B.S.</p>
+            <p style={{ fontSize: '1vw',marginLeft : "7%" }}>● 2023 DMU PD Lab MIT</p>
+            <p style={{ fontSize: '1vw' }}>- 2020.05 ~ 2022.09 ROKA (Republic of Korea Army)</p>
+            <p style={{ fontSize: '1vw',marginLeft : "7%" }}> ● GOP Signal Corps </p>
+            <p style={{ fontSize: '1vw',marginLeft : "7%" }}> ● Best training camp squad(Awarded Division and Brigade Commanders Commendations)</p>
           </div>
         </div>
       </div>
@@ -186,7 +184,7 @@ const Mainpage = () => {
             </Carousel>
           </div>
       </div>
- 
+      <div className='mt-5'></div>
       <div id="award"></div>
       <div className={styles.awardbox}>
         <div className='mt-5'></div>
@@ -213,6 +211,7 @@ const Mainpage = () => {
           <div className={styles.awarddetail_content}>
           <p style={{fontWeight: 'bold', marginBottom: '2%',  textAlign: 'center', fontSize: '1.5vw'  }}>사용된 기술</p><br/><br/>
               Spring, Flask, Next.js, Kubernetes(k3s), Docker, NFS, DNS, MSA, Arduino, NginxIngressController, YoloV5 등
+          <hr />
           </div>
               {/* <Achievements title="2023 동양미래EXPO 제41회 작품전시회 - 장려상 -"/> */}
         </div>

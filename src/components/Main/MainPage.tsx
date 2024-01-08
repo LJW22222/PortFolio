@@ -43,35 +43,33 @@ const Mainpage = () => {
   return (
     <>
       <div className={styles.myinformation}>
-        <div className={styles.Businesscard}>
-          <div className={styles.myimg}>
-
-          </div>
-          <div className={styles.information}>
-            <p style={{ fontSize: '2vw', fontWeight: 'bold' }}>Jongwon Lee</p>
-            <p style={{ fontSize: '1.5vw' }}>Back-end Developer</p>
-
-            <p style={{ fontSize: '1vw', marginTop : "1%" }}>
-            DMU ComputerSoftwareEngineering B.S.
+        <div className={styles.Introduction_sentence}><br></br>
+            <p style={{ fontSize: '2.4vw', fontWeight: 'bold', marginBottom: '5%', textAlign : "center" }}>
+            Hi! I`m JongWon Lee<br/> 
+            I`m a back-end engineer who develops in line with rapidly changing trends
             </p>
-            <p style={{ fontSize: '1vw', marginBottom: '1%' }}>
-              E | whddnjs1245@gmail.com
-            </p>
-            <p style={{ fontSize: '1vw', marginLeft: '-13%' }}>
-              P | 010-XXXX-XXXX
-            </p>
-          </div>
         </div>
+
         <div className={styles.aboutme}>
-            <div className={styles.aboutinfor2}><br></br>
-              <p style={{ fontSize: '1.6vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>
-              Hi! I`m JongWon Lee<br/> 
-              I`m a back-end engineer who develops in line with rapidly changing trends
-              </p>
-              <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>I`m Studying the latest technologies in line with changing trends.</p>
-              <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>I Studying steadily so as not to fall behind.</p>
-              <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>We are working on a project that reflects the latest technology.</p><br/>
-         </div>
+          <div className={styles.Businesscard}>
+            <div className={styles.myimg}>
+            </div>
+            <div className={styles.information}>
+              <p style={{ fontSize: '2vw', fontWeight: 'bold' }}>Jongwon Lee</p>
+              <p style={{ fontSize: '1.5vw' }}>Back-end Developer</p>
+              <p style={{ fontSize: '1vw', marginTop : "1%", marginBottom : "2%" }}>
+              DMU ComputerSoftwareEngineering B.S.</p>
+              <p style={{ fontSize: '1vw', marginBottom: '1%' }}>
+                E | whddnjs1245@gmail.com</p>
+              <p style={{ fontSize: '1vw', marginLeft: '-15.5%' }}>
+                P | 010-XXXX-XXXX</p>
+          </div>
+          </div>
+          <div className={styles.aboutinfor2}><br></br>
+            <p style={{ fontSize: '1.3vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>Studying diligently to stay current with evolving trends in technology.</p>
+            <p style={{ fontSize: '1.3vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>Organizing and posting acquired knowledge on my blog.</p>
+            <p style={{ fontSize: '1.3vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>Working on a project that reflects the latest technology.</p><br/>
+          </div>
         </div>
         
 
@@ -87,8 +85,13 @@ const Mainpage = () => {
         </p>
         <div className={styles.who_introduce_box}>
           <p>
-            빠르게 변화하는 최신 기술을 따라가는 개발자 이종원 입니다.
-            <br /> 다양한 기술과 최신 기술을 프로젝트에 적용시키는 것에 많은 관심이 있고, 흥미를 느낍니다.
+            대학교 컴퓨터소프트웨어 공학과를 다니면서 프로그래밍을 시작하였습니다.<br/>
+            MIT 전공 동아리에 참여하여 다양한 활동과 프로젝트 경험을 쌓았습니다.<br/>
+            <br/>
+            동아리 프로젝트를 진행하면서 적은 수의 트래픽에도 서버에 부하가 걸리는 문제점을 겪었습니다. <br/>
+            당시, MSA와 Kubernetes의 Nginx Ingress Controller를 통해 트래픽 부하를 줄일 수 있었고<br/>
+            이로 인해 서버 부하가 되는것을 어느정도 막을 수 있었습니다.<br/>
+            이러한 경험을 통해 성능 최적화와 확장성을 강화하는 방법에 대해 공부하고 있습니다.<br/>
             <br />
           </p>
           <p>

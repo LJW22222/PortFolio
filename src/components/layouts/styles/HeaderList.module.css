@@ -1,67 +1,89 @@
 /* MenuBar.module.css */
+
+/* Common styles for menu items */
+.menuItem {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.menuButton {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5vw;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.menuButton:hover {
+  background-color: lightblue;
+  color: #333;
+}
+
+.menuButton:visited {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Default menu bar styles */
 .menuBar {
-    background-color: #ffffff;
-    padding: 10px;
-  }
-  
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.menuList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fixed menu bar styles */
+.fixedMenuBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 10px;
+  z-index: 100;
+}
+
+.fixedMenuButton {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.fixedMenuButton:hover {
+  background-color: lightblue;
+  color: #333;
+}
+
+/* Responsive styles for screens less than or equal to 768px */
+@media screen and (max-width: 768px) {
   .menuList {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    flex-direction: row; /* 수정된 부분: 세로에서 가로로 변경 */
+    justify-content: space-around; /* 추가된 부분: 각 항목을 가로로 나열하고 사이 공간을 동일하게 설정 */
+    align-items: center; /* 추가된 부분: 세로 가운데 정렬 */
+    flex-wrap: wrap; /* 추가된 부분: 너비가 부족할 경우 다음 줄로 넘어감 */
   }
-  
+
   .menuItem {
-    margin: 0 10px;
-    color: white;
-    cursor: pointer;
+    margin: 0;
   }
-  
-  .menuButton {
-    background-color: transparent;
-    border: none;
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    font-weight: bold;
-  }
-  
-  .menuButton:hover {
-    background-color: lightblue;
-    color: #333;
-  }
+
   .fixedMenuBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #ffffff; /* Change this to your desired background color */
     padding: 10px;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-    z-index: 100;
   }
-  
-  /* Style for the fixed menu buttons */
-  .fixedMenuButton {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 16px;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-  
-  .fixedMenuButton:hover {
-    background-color: lightblue;
-    color: #333;
-  }
+
   .menuButton {
-    text-decoration: none; /* Add underline for normal state */
-    color: rgb(0, 0, 0); /* Default text color */
+    font-size: 2vw;
   }
-  
+}

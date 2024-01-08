@@ -45,17 +45,7 @@ const Mainpage = () => {
       <div className={styles.myinformation}>
         <div className={styles.Businesscard}>
           <div className={styles.myimg}>
-            <Image
-              src="/img/peple.png"
-              alt="Description of the image"
-              width={200}
-              height={160}
-              style={{
-                marginLeft: '50%',
-                maxWidth: '100%', // 이미지의 최대 너비를 부모 요소에 맞게 조정
-                height: 'auto',   // 높이를 자동으로 조정하여 비율 유지
-              }}
-            />
+
           </div>
           <div className={styles.information}>
             <p style={{ fontSize: '2vw', fontWeight: 'bold' }}>Jongwon Lee</p>
@@ -72,24 +62,19 @@ const Mainpage = () => {
             </p>
           </div>
         </div>
-        
         <div className={styles.aboutme}>
-          <div className={styles.aboutinfor2}>
-            <hr></hr>
-            <p style={{ fontSize: '1.6vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>
-            Hi! I`m JongWon Lee<br/> 
-            I`m a back-end engineer who develops in line with rapidly changing trends
-            </p>
-            <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>I`m Studying the latest technologies in line with changing trends.</p>
-            <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>I Studying steadily so as not to fall behind.</p>
-            <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>We are working on a project that reflects the latest technology.</p><br/>
-            <p style={{ fontSize: '1vw' }}>- DMU ComputerSoftwareEngineering B.S.</p>
-            <p style={{ fontSize: '1vw',marginLeft : "7%" }}>● 2023 DMU PD Lab MIT</p>
-            <p style={{ fontSize: '1vw' }}>- 2020.05 ~ 2022.09 ROKA (Republic of Korea Army)</p>
-            <p style={{ fontSize: '1vw',marginLeft : "7%" }}> ● GOP Signal Corps </p>
-            <p style={{ fontSize: '1vw',marginLeft : "7%" }}> ● Best training camp squad(Awarded Division and Brigade Commanders Commendations)</p>
+            <div className={styles.aboutinfor2}><br></br>
+              <p style={{ fontSize: '1.6vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>
+              Hi! I`m JongWon Lee<br/> 
+              I`m a back-end engineer who develops in line with rapidly changing trends
+              </p>
+              <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>I`m Studying the latest technologies in line with changing trends.</p>
+              <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>I Studying steadily so as not to fall behind.</p>
+              <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>We are working on a project that reflects the latest technology.</p><br/>
+         </div>
           </div>
-        </div>
+        
+
       </div>
       <div id="about"></div>
       <div className={styles.who}>
@@ -108,7 +93,7 @@ const Mainpage = () => {
           </p>
           <p>
             <strong>SE |</strong>
-            <br />
+
             <ul>
               <li>라즈베리파이를 클러스터링하여 Kubernetes(k3s)를 적용한 경험</li>
               <li>Kubernetes에 Nginx Ingress Controller를 사용한 경험</li>
@@ -196,7 +181,8 @@ const Mainpage = () => {
             <p>Activities</p>
           </div>
           <div className={styles.awarddetail_content_title}>
-            <p>2023 동양미래EXPO 제41회 작품전시회 - 장려상 -</p>
+          <a href='https://leeportfolios.notion.site/KES-2023-Aily-3fbb2eb9ce9d4f19a314762866b87b8a?pvs=4'><p>2023 동양미래EXPO 제41회 작품전시회 - 장려상 -</p>
+            </a>
           </div>
           <div className={styles.awarddetail_content}>
             <p style={{fontWeight: 'bold',  textAlign: 'center', fontSize: '1.5vw' }}>Back-End</p><br/><br/>

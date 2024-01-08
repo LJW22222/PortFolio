@@ -42,7 +42,7 @@ function HeaderList(props: any)
   };
 
   const openBloge = () => {
-    window.open('https://ljw22222.github.io/', '_blank');
+    window.open('https://jongone.com/', '_blank');
   };
 
 

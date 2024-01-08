@@ -2,20 +2,17 @@
 
 /* 미디어 쿼리 - 화면 폭이 768px 이하일 때 */
 @media screen and (max-width: 768px) {
-  /* 내 정보 섹션 */
   .myinformation {
     height: auto;
     margin-top: 3%;
   }
 
-  /* 명함 카드 */
   .Businesscard {
     width: 80%;
     height: auto;
     transform: translateX(10%);
   }
 
-  /* 나에 대한 소개글 */
   .aboutme {
     width: 90%;
     margin-left: 5%;
@@ -25,26 +22,22 @@
     margin-left: 5%;
   }
 
-  /* 프로젝트 이미지와 기술 트리 섹션 */
   .projectimgbox,
   .techbox,
   .awardbox {
     height: auto;
   }
 
-  /* 프로젝트 상세 정보 */
   .projectbox {
     height: auto;
     margin-bottom: 3%;
   }
 
-  /* GitHub 버튼 위치 조정 */
   .githubButton {
     margin-left: 10%;
     margin-top: 3%;
   }
 }
-
 /* 내 정보 스타일 */
 .myinformation {
   width: 100%;

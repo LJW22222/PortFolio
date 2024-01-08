@@ -65,10 +65,10 @@ const Mainpage = () => {
                 P | 010-XXXX-XXXX</p>
           </div>
           </div>
-          <div className={styles.aboutinfor2}><br></br>
+          <div className={styles.aboutinfor2}>
             <p style={{ fontSize: '1.3vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>Studying diligently to stay current with evolving trends in technology.</p>
             <p style={{ fontSize: '1.3vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>Organizing and posting acquired knowledge on my blog.</p>
-            <p style={{ fontSize: '1.3vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>Working on a project that reflects the latest technology.</p><br/>
+            <p style={{ fontSize: '1.3vw', fontWeight: 'bold', textAlign : "center" }}>Working on a project that reflects the latest technology.</p><br/>
           </div>
         </div>
         

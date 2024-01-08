@@ -115,20 +115,10 @@
 
 .aboutinfor2 {
   position: relative;
-  width: 70%;
+  width: auto;
+  padding-top: 3%;
   margin-left: 30%;
   height: auto;
-}
-
-
-.titlesize {
-  font-size: 1.5vw;
-}
-
-.aboutinfor p {
-  font-size: 1vw;
-  margin-left: 5%;
-  margin-bottom: 0;
 }
 
 /* 프로젝트 이미지 박스 스타일 */

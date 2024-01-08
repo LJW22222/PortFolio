@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from "next/link";
 import styles from "@/components/Main/styles/MainPage.module.css";
 import Carousel from 'react-bootstrap/Carousel';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS 스타일시트를 추가
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useSkillScrollAnimation } from "@/components/Main/animation/skillAnimation";
 
 const ProjectItem: React.FC<{ projectName: string; category: string; team: string; githubLink: string }> = ({ projectName, category, team, githubLink }) => (
@@ -72,7 +72,7 @@ const Mainpage = () => {
               <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>I Studying steadily so as not to fall behind.</p>
               <p style={{ fontSize: '1.2vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>We are working on a project that reflects the latest technology.</p><br/>
          </div>
-          </div>
+        </div>
         
 
       </div>

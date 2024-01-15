@@ -31,7 +31,7 @@ export default function Home() {
       <div className="background-image-container" id="home"></div>
       
           <div className={style.mobileboxline}>
-            {isLoading ? <Lodingpage /> : <MobileBoxPage />}
+            <MobileBoxPage />
           </div>
           <div className={style.footerline}>
             <Footer />

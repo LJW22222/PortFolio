@@ -15,7 +15,7 @@ export default function Header() {
     { id: "tech", label: "Tech" },
     { id: "project", label: "Projects" },
     { id: "award", label: "Awards" },
-    { id: "blog", label: "Blog" },
+    // { id: "blog", label: "Blog" },
   ];
 
   const scrollToSection = (sectionId: string) => {

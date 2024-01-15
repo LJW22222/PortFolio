@@ -1,17 +1,12 @@
 .body {
   margin: 0;
   padding: 0;
-  width: auto;
-  height: 543vh;
-}
-
-.all {
-  position: relative;
   width: 100%;
-  height: 543vh;
-  /* box-sizing: border-box; */
+  height: 4800px;
+  position: absolute;
   background-color: rgb(255, 255, 255);
 }
+
 
 .headerline {
   position: absolute;
@@ -24,14 +19,12 @@
   position: absolute;
   width: 100%;
   top: 2%;
-  
-  height: 80%;
+  height: 70%;
 }
 
 .footerline {
-  position: relative;
+  position: absolute; /* 고정된 위치로 변경 */
   width: 100%;
-  height: calc(100% - 100%);
+  height: 1%;
   bottom: 0;
 }
-

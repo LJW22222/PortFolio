@@ -16,30 +16,26 @@ export default function Home() {
       setSessionName(storedSessionName);
     }
 
-    // 로딩 중을 2초 동안 보이게 하기
     const loadingTimeout = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
 
-    // 컴포넌트가 언마운트되면 타임아웃 클리어
     return () => clearTimeout(loadingTimeout);
   }, []); 
 
   return (
     <>
-      <body className={style.body}>
-        <div className={style.all}>
-          <div className={style.headerline}>
-            <Header />
-          </div>
-          <div className={style.mobileboxline}>
-            {isLoading ? <Lodingpage /> : <MobileBoxPage />}
-          </div>
+      <div className={style.body}>
+        <div className={style.headerline}>
+          <Header />
+        </div>
+        <div className={style.mobileboxline}>
+          {isLoading ? <Lodingpage /> : <MobileBoxPage />}
         </div>
         <div className={style.footerline}>
           <Footer />
         </div>
-      </body>
+      </div>
     </>
   );
 }

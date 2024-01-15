@@ -11,4 +11,13 @@
     margin: 0;
     padding: 5px;
   }
-  
+  /* 반응형 스타일 - 600px 이하일 때 */
+@media screen and (max-width: 600px) {
+  .footer {
+      width: 100%;
+  }
+
+  .footerText {
+      font-size: 14px; /* 예시로 폰트 크기를 줄임 */
+  }
+}

@@ -61,7 +61,7 @@ const Mainpage = () => {
               DMU ComputerSoftwareEngineering B.S.</p>
               <p style={{ fontSize: '1vw', marginBottom: '1%' }}>
                 E | whddnjs1245@gmail.com</p>
-              <p style={{ fontSize: '1vw', marginLeft: '-15.5%' }}>
+              <p style={{ fontSize: '1vw', marginLeft: '-17.5%' }}>
                 P | 010-XXXX-XXXX</p>
           </div>
           </div>

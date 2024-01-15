@@ -15,6 +15,7 @@ export default function Header() {
     { id: "tech", label: "Tech" },
     { id: "project", label: "Projects" },
     { id: "award", label: "Awards" },
+    { id: "blog", label: "Blog" },
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -72,7 +73,6 @@ export default function Header() {
     setActiveNavItem("home"); // 홈 섹션을 활성화합니다.
     setIsMobileMenuOpen(false);
   };
-
   return (
     <header
       className={`header flex items-center justify-between text-center text-base font-roboto header-background-transition ${
@@ -90,8 +90,8 @@ export default function Header() {
       </div>
       {isMobile && (
         <div className="hamburger-icon" onClick={toggleMobileMenu}>
-          <Image // Image 컴포넌트로 변경
-            src="/image/menu.png" // 이미지 경로
+          <Image
+            src="/image/menu.png"
             alt="Menu Icon"
             width={32}
             height={32}
@@ -110,7 +110,11 @@ export default function Header() {
           {sections.map((section) => (
             <li className="navItem" key={section.id}>
               <a
-                href={`#${section.id}`}
+                href={
+                  section.id === "blog"
+                    ? "https://jongone.com" // 블로그에 대한 링크를 네이버로 수정
+                    : `#${section.id}`
+                }
                 onClick={() => scrollToSection(section.id)}
                 className={`${
                   activeNavItem !== section.id ? "text-gray-100" : ""

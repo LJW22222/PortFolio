@@ -44,7 +44,7 @@ const Mainpage = () => {
     <>
       <div className={styles.myinformation}>
         <div className={styles.Introduction_sentence}><br></br>
-            <p style={{ fontSize: '2.4vw', fontWeight: 'bold', marginBottom: '5%', textAlign : "center" }}>
+            <p style={{ fontSize: '2.4vw', fontWeight: 'bold', marginBottom: '5%', marginTop: '40%', textAlign : "center" ,color : "white"}}>
             Hi! I`m JongWon Lee<br/> 
             I`m a back-end engineer who develops in line with rapidly changing trends
             </p>
@@ -63,7 +63,7 @@ const Mainpage = () => {
                 E | whddnjs1245@gmail.com</p>
               <p style={{ fontSize: '1vw', marginLeft: '-17.5%' }}>
                 P | 010-XXXX-XXXX</p>
-          </div>
+            </div>
           </div>
           <div className={styles.aboutinfor2}>
             <p style={{ fontSize: '1.3vw', fontWeight: 'bold', marginBottom: '3%', textAlign : "center" }}>Studying diligently to stay current with evolving trends in technology.</p>
@@ -71,8 +71,6 @@ const Mainpage = () => {
             <p style={{ fontSize: '1.3vw', fontWeight: 'bold', textAlign : "center" }}>Working on a project that reflects the latest technology.</p><br/>
           </div>
         </div>
-        
-
       </div>
       <div id="about"></div>
       <div className={styles.who}>

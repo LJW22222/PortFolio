@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 4800px;
+  height: 5800px;
   position: absolute;
   background-color: rgb(255, 255, 255);
 }
@@ -18,7 +18,6 @@
 .mobileboxline {
   position: absolute;
   width: 100%;
-  top: 2%;
   height: 70%;
 }
 

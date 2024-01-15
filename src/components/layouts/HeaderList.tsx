@@ -1,76 +1,131 @@
-import Link from "next/link";
-import styles from '@/components/layouts/styles/HeaderList.module.css'
+import React, { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 
 
-function HeaderList(props: any)
-{
+export default function Header() {
+  const [activeNavItem, setActiveNavItem] = useState("home");
+  const [headerBackground, setHeaderBackground] = useState("transparent");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const mobileNavRef = useRef<HTMLDivElement | null>(null);
 
-  //메뉴바에서 버튼 클릭시 화면을 어느 지점으로 이동시켜주는 함수
-  const scrollToWho = () => {
-    const aboutSection = document.getElementById('who');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+  const sections = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "tech", label: "Tech" },
+    { id: "project", label: "Projects" },
+    { id: "award", label: "Awards" },
+  ];
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setActiveNavItem(sectionId);
+      setIsMobileMenuOpen(false);
     }
   };
 
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setHeaderBackground("white");
+    } else {
+      setHeaderBackground("transparent");
     }
   };
 
-  const scrollToProject = () => {
-    const projectSection = document.getElementById('project');
-    if (projectSection) {
-      projectSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-  
-  const scrollToTech = () => {
-    const techSection = document.getElementById('tech');
-    if (techSection) {
-      techSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
   };
 
-  const scrollToAwardh = () => {
-    const techSection = document.getElementById('award');
-    if (techSection) {
-      techSection.scrollIntoView({ behavior: 'smooth' });
+  const handleClickOutsideMenu = (e: MouseEvent) => {
+    if (
+      mobileNavRef.current &&
+      !mobileNavRef.current.contains(e.target as Node)
+    ) {
+      setIsMobileMenuOpen(false);
     }
   };
 
-  const openBloge = () => {
-    window.open('https://jongone.com/', '_blank');
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768); // 초기 렌더링 시 모바일 여부를 설정합니다.
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    document.addEventListener("mousedown", handleClickOutsideMenu);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("mousedown", handleClickOutsideMenu);
+    };
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setActiveNavItem("home"); // 홈 섹션을 활성화합니다.
+    setIsMobileMenuOpen(false);
+  };
 
   return (
-    <nav className={`${styles.menuBar} ${styles.fixedMenuBar}`}>
-      <ul className={styles.menuList}>
-      <li className={styles.menuItem}>
-      <a href="#" className={styles.menuButton} onClick={scrollToWho}>Who</a>
-      </li>
-      <li className={styles.menuItem}>
-      <a href="#about" className={styles.menuButton} onClick={scrollToAbout}>About</a>
-      </li>
-      <li className={styles.menuItem}>
-        <a href="#tech" className={styles.menuButton} onClick={scrollToTech}>Tech</a>
-      </li>
-      <li className={styles.menuItem}>
-        <a href="#project" className={styles.menuButton} onClick={scrollToProject}>Project</a>
-      </li>
-      <li className={styles.menuItem}>
-        <a href="#award" className={styles.menuButton} onClick={scrollToAwardh}>Award</a>
-      </li>
-      <li className={styles.menuItem}>
-        <button className={styles.menuButton} onClick={openBloge}>Blog</button>
-      </li>
-    </ul>
-  </nav>
-);
+    <header
+      className={`header flex items-center justify-between text-center text-base font-roboto header-background-transition ${
+        headerBackground === "white" ? "text-black" : "text-white"
+      }`}
+      style={{ backgroundColor: headerBackground }}
+    >
+      <div
+        id="logo"
+        className="logo text-center"
+        onClick={scrollToTop}
+        style={{ cursor: "pointer" }}
+      >
+        Backend Developer
+      </div>
+      {isMobile && (
+        <div className="hamburger-icon" onClick={toggleMobileMenu}>
+          <Image // Image 컴포넌트로 변경
+            src="/image/menu.png" // 이미지 경로
+            alt="Menu Icon"
+            width={32}
+            height={32}
+            style={{
+              filter:
+                headerBackground === "white" ? "invert(0%)" : "invert(100%)",
+            }}
+          />
+        </div>
+      )}
+      <nav
+        ref={mobileNavRef}
+        className={`mobile-nav ${isMobileMenuOpen ? "open" : ""}`}
+      >
+        <ul className="navList">
+          {sections.map((section) => (
+            <li className="navItem" key={section.id}>
+              <a
+                href={`#${section.id}`}
+                onClick={() => scrollToSection(section.id)}
+                className={`${
+                  activeNavItem !== section.id ? "text-gray-100" : ""
+                }`}
+                style={{
+                  textDecoration: "none",
+                  transition: "color 0.3s",
+                }}
+              >
+                {section.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
 }
-
-export default HeaderList;

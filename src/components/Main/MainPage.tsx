@@ -4,9 +4,9 @@ import Link from "next/link";
 import styles from "@/components/Main/styles/MainPage.module.css";
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useSkillScrollAnimation } from "@/components/Main/animation/skillAnimation";
 
 const ProjectItem: React.FC<{ projectName: string; category: string; team: string; githubLink: string }> = ({ projectName, category, team, githubLink }) => (
+  
   <div className={styles.projectbox}>
     <div className={styles.hideback} />
     <Link href="/ProjectInformation">
@@ -37,7 +37,6 @@ const ProjectItem: React.FC<{ projectName: string; category: string; team: strin
 
 const Mainpage = () => {
 
-  const { ref, isInViewport } = useSkillScrollAnimation();
   const React = 40;
 
   return (
@@ -130,11 +129,11 @@ const Mainpage = () => {
         <p className={styles.who_title}>Tech</p>
         <div className={styles.techbox_content_box}>
           <p>
-          <strong>S | Strong</strong>
-          <ul className={styles.techbox_content}>
-            <li>BE : Spring | Spring Boot | Flask | Spring JPA | MySQL</li>
-            <li>FE : Next.js</li>
-          </ul>
+            <strong>S | Strong</strong>
+            <ul className={styles.techbox_content}>
+              <li>BE : Spring | Spring Boot | Flask | Spring JPA | MySQL</li>
+              <li>FE : Next.js</li>
+            </ul>g
           </p>
           <p>
           <strong>W | Weak</strong>

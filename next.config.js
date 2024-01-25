@@ -1,16 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {  reactStrictMode: true,
-    swcMinify: true,
-    async rewrites() {
-      return [
-        {
-          source: "/:path*",
-          destination: "http//localhost:8080/:path*",
-        },
-      ];
-    },}
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  exportPathMap: function () {
+    return {
+      '/': { page: '/' },
+      // Add additional paths if needed
+    };
+  },
+};
 
-module.exports = {
-    nextConfig
-    
-}
+module.exports = nextConfig;

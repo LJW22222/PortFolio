@@ -1,4 +1,4 @@
-const { withPlausibleProxy } = require('next-plausible')
+const { withPlausibleProxy } = require('next-plausible');
 
 const nextConfig = {
   reactStrictMode: true,
@@ -11,7 +11,6 @@ const nextConfig = {
       },
     ];
   },
-  // 정적 HTML 내보내기 설정 추가
   output: {
     export: true
   }

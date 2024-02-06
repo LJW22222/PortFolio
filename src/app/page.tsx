@@ -7,7 +7,9 @@ import style from '@/app/allstyle.module.css';
 import Lodingpage from '@/app/loding/loding';
 import Header from '@/components/layouts/HeaderList';
 
+
 export default function Home() {
+  
   return (
     <>
       <div className={style.body}>

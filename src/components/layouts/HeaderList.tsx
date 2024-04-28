@@ -78,7 +78,7 @@ export default function Header() {
       className={`header flex items-center justify-between text-center text-base font-roboto header-background-transition ${
         headerBackground === "white" ? "text-black" : "text-white"
       }`}
-      style={{ backgroundColor: headerBackground }}
+      style={{ backgroundColor:headerBackground }}
     >
       <div
         id="logo"

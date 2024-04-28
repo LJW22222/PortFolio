@@ -1,6 +1,7 @@
 const { withPlausibleProxy } = require('next-plausible');
 
 const nextConfig = {
+  output : 'export',
   reactStrictMode: true,
   swcMinify: true,
   async rewrites() {
@@ -11,9 +12,6 @@ const nextConfig = {
       },
     ];
   },
-  output: {
-    export: true
-  }
 };
 
 module.exports = withPlausibleProxy(nextConfig);

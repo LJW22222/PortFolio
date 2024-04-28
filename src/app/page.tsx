@@ -13,9 +13,9 @@ export default function Home() {
       <Header />
       <div className="background-image-container" id="home"></div>
      
-          <div className={style.footerline}>
-            <Footer />
-          </div>
+      <div className={style.footerline}>
+        <Footer />
+      </div>
 
       </div>
     </>
